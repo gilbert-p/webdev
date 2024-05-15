@@ -1,0 +1,70 @@
+.appContainer {
+    position: absolute;
+    width: 100vw;
+    max-width: 480px;
+}
+
+.headerContainer {
+    width: inherit;
+    height: 600px;
+    background-color: red;
+    overflow: hidden;
+}
+
+.glassOverlay {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: white;
+    opacity: 0.3;
+
+    z-index: 1;
+}
+
+.imageScroll {
+    width: 1200px;
+    height: 1200px;
+    background: url('../assets/blue_waves_low_poly.png');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: cover;
+    filter: blur(2px);
+    animation: parallaxScroll ease-in-out 20s infinite alternate;
+    /* transform: rotate(45deg); */
+}
+
+.devTitle {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 210px;
+    height: 100px;
+    background-color: black;
+    border-radius: 7px;
+    z-index: 2;
+
+    > h2 {
+        color: white;
+        height: 1rem;
+        font-weight: bold;
+        line-height: 0.5rem;
+    }
+
+    > h2:nth-child(2) {
+        font-weight: 400;
+    }
+}
+
+@keyframes parallaxScroll {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translate(-700px, -600px);
+    }
+}
