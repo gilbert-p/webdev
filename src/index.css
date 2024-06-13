@@ -15,10 +15,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #242424;
+  background-color: #01071F;
+  color: rgb(230, 230, 230);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.react-player___preview {
+  height: 0 !important;
+  max-height: 200px;
+  object-fit: fill;
 }

@@ -1,3 +1,4 @@
+
 .appContainer {
     position: absolute;
     width: 100vw;
@@ -5,33 +6,74 @@
 }
 
 .headerContainer {
-    width: inherit;
+    position: relative;
+    width: calc(100% - 20px);
+    max-width: inherit;
     height: 600px;
-    background-color: red;
     overflow: hidden;
+}
+
+#p5Animation {
+    display: none;
 }
 
 .glassOverlay {
     position: absolute;
-    width: inherit;
-    height: inherit;
+    width: 1200px;
+    height: 1200px;
     background-color: white;
-    opacity: 0.3;
-
+    filter: initial;
     z-index: 1;
 }
 
-.imageScroll {
+.filterMask {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: rgb(255, 0, 0);
+    opacity: 0.2;
+    z-index: 1;
+    animation: hueRotateAnimation ease-in-out 5s infinite alternate
+}
+
+.imageScrollContainer {
+    position: relative;
     width: 1200px;
     height: 1200px;
-    background: url('../assets/blue_waves_low_poly.png');
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
-    background-size: cover;
-    filter: blur(2px);
-    animation: parallaxScroll ease-in-out 20s infinite alternate;
     /* transform: rotate(45deg); */
+
+
+    .imageScrollView {
+        width: 3840px;
+        height: 2195px;
+        background: url('../assets/images/blue_waves_low_poly_4k_optimized-min.png');
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        background-size: 75%;
+        overflow: auto;
+        animation: parallaxScroll ease-in-out 20s infinite alternate;
+    }
 }
+
+@keyframes hueRotateAnimation {
+    0% {
+      filter: hue-rotate(180deg);
+    }
+    100% {
+      filter: hue-rotate(270deg);
+    }
+  }
+
+@keyframes parallaxScroll {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translate(-800px, -800px);
+    }
+}
+
+
 
 .devTitle {
     position: absolute;
@@ -45,7 +87,7 @@
     width: 210px;
     height: 100px;
     background-color: black;
-    border-radius: 7px;
+    border-radius: 3px;
     z-index: 2;
 
     > h2 {
@@ -60,11 +102,369 @@
     }
 }
 
-@keyframes parallaxScroll {
-    from {
-        transform: translateX(0px);
-    }
-    to {
-        transform: translate(-700px, -600px);
+
+.projects {
+    padding-left: 10px;
+    padding-right: 10px;
+    h2 {
+        padding-left: 10px;
     }
 }
+
+.reactPlayer {
+    position: relative;
+    z-index: -1;
+
+    > video {
+        height: 300px;
+        max-height: 270px;
+        width: 100%;
+        object-fit: cover;
+        /* opacity: 0.7; */
+    }
+
+
+}
+
+.articleSection {
+    display: flex;
+    height: inherit;
+    border: 1px solid #32859e;
+    border-radius: 3px;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    h3 {
+        align-self: center;
+        font-size: 1.4rem;
+    }
+
+
+}
+
+.articleContainer {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+}
+
+.projectDetails {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.skillSection {
+    width: calc(100% - 20px);
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 40px;
+
+    h2 {
+        padding-left: 10px;
+    }
+}
+
+.skillItemList {
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #32859e;
+    border-radius: 3px;
+}
+
+.skillItemContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: 60px;
+    
+    &:nth-child(n + 2) {
+        margin-top: 20px;
+    }
+
+    .skillDetails {
+        margin-left: 20px;
+        line-height: 10px;
+    }
+}
+
+.webDevIcon {
+    width: 80px;
+    height: 60px;
+    background-image: url('../assets/icons/web_dev_graphic.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.reactIcon {
+    width: 80px;
+    height: 60px;
+    background-image: url('../assets/icons/react-logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.figmaIcon {
+    width: 80px;
+    height: 60px;
+    background-image: url('../assets/icons/logo-figma.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 70% 0 ;
+}
+
+.gsapIcon {
+    width: 80px;
+    height: 60px;
+    background-image: url('../assets/icons/gsap-logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 45% 0 ;
+}
+
+
+
+.skillsetSection {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: inherit;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 40px;
+}
+
+.skillsetModal {
+    /* align-content: end; */
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+#interfaceDevelopment {
+    background: url('../assets/images/interface_development.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#database {
+    background: url('../assets/images/database.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#optimization {
+    background: url('../assets/images/optimization.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.skillsetDescription {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: inherit;
+    height: 100px;
+    top: 100%;
+    transform: translateY(-100%);
+    background-color: rgba(0, 0, 0, 0.75);
+    
+    h2 {
+        position: relative;
+        top: -10px;
+        height: 1rem;
+    }
+    p {
+        position: relative;
+        top: -25px;
+        height: 1rem;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+@media (min-width: 480px) {
+    .appContainer {
+        max-width: 2000px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .headerContainer {
+        width: inherit;
+        background-color:  unset;
+    } 
+
+    @keyframes parallaxScroll {
+        from {
+            transform: translate(0px, 0px);
+        }
+        to {
+            transform: translate(-600px, -600px);
+        }
+    }
+
+    .imageScrollContainer {
+        position: relative;
+        width: inherit;
+        height: inherit;
+        filter: unset;
+        overflow: hidden;
+
+        .imageScrollView {
+            width: 3840px;
+            height: 2195px;
+            background: url('../assets/images/blue_waves_low_poly_4k_optimized-min.png');
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            background-size: auto;
+            overflow: auto;
+            animation: parallaxScroll ease-in-out 10s infinite alternate;
+
+        }
+    }
+
+    #p5Animation {
+        position: absolute;
+        display: inline-block;
+        height: inherit;
+        width: inherit;
+        z-index: -1;
+    }
+
+    .glassOverlay {
+        background: linear-gradient(45deg, rgba(17,190,255,1) 25%, rgb(13, 255, 235) 74%);
+    }
+
+    .projects {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .articleContainer {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        height: 755px;
+    }
+    .projectDetails {
+        p{
+            &:nth-child(1){
+                font-size: 24px;
+            }
+            &:nth-child(2){
+                font-size: 20px;
+            }
+            &:nth-child(3){
+                font-size: 24px;
+            }
+        }
+        ul > li {
+            font-size: 20px;
+            line-height: 2rem;
+        }
+    }
+    .articleSection {
+        width: 480px;
+        height: inherit;
+    }
+
+    .cardBackgroundUnderlay {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        background-color: black;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+
+.skillSection {
+    width: inherit;
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 40px;
+
+
+    h2 {
+        padding-left: 10px;
+    }
+}
+
+.skillItemList {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #32859e;
+    border-radius: 3px;
+    justify-content: space-around;
+    
+}
+
+.skillItemContainer {
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    width: 350px;
+    min-width: 350px;
+    height: 60px;
+
+    
+    &:nth-child(n + 2) {
+        margin-top: 0px;
+    }
+
+    .skillDetails {
+        margin-left: 20px;
+        line-height: 10px;
+    }
+}
+
+
+.skillsetSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    width: inherit;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 40px;
+}
+
+.skillsetModal {
+    /* align-content: end; */
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+#interfaceDevelopment {
+    background: url('../assets/images/interface_development.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 500px;
+}
+
+#database {
+    background: url('../assets/images/database.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 500px;
+}
+
+#optimization {
+    background: url('../assets/images/optimization.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 500px;
+}
+    
+  }
