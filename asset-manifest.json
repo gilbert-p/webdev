@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/webdev/static/css/main.62933176.css",
-    "main.js": "/webdev/static/js/main.b38751ac.js",
+    "main.css": "/webdev/static/css/main.848c9020.css",
+    "main.js": "/webdev/static/js/main.ecb4ce44.js",
     "reactPlayerYouTube.js": "/webdev/static/js/reactPlayerYouTube.ba52fbf1.chunk.js",
     "reactPlayerSoundCloud.js": "/webdev/static/js/reactPlayerSoundCloud.06aa46d8.chunk.js",
     "reactPlayerVimeo.js": "/webdev/static/js/reactPlayerVimeo.7fd3d950.chunk.js",
@@ -27,8 +27,8 @@
     "static/media/envelope_ship.png": "/webdev/static/media/envelope_ship.e316f1b16285bc31bac9.png",
     "static/media/tamper_monkey_logo.png": "/webdev/static/media/tamper_monkey_logo.c1c9c0b4f3d2cd239f7e.png",
     "index.html": "/webdev/index.html",
-    "main.62933176.css.map": "/webdev/static/css/main.62933176.css.map",
-    "main.b38751ac.js.map": "/webdev/static/js/main.b38751ac.js.map",
+    "main.848c9020.css.map": "/webdev/static/css/main.848c9020.css.map",
+    "main.ecb4ce44.js.map": "/webdev/static/js/main.ecb4ce44.js.map",
     "reactPlayerYouTube.ba52fbf1.chunk.js.map": "/webdev/static/js/reactPlayerYouTube.ba52fbf1.chunk.js.map",
     "reactPlayerSoundCloud.06aa46d8.chunk.js.map": "/webdev/static/js/reactPlayerSoundCloud.06aa46d8.chunk.js.map",
     "reactPlayerVimeo.7fd3d950.chunk.js.map": "/webdev/static/js/reactPlayerVimeo.7fd3d950.chunk.js.map",
@@ -46,7 +46,7 @@
     "453.3a43a69c.chunk.js.map": "/webdev/static/js/453.3a43a69c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.62933176.css",
-    "static/js/main.b38751ac.js"
+    "static/css/main.848c9020.css",
+    "static/js/main.ecb4ce44.js"
   ]
 }
